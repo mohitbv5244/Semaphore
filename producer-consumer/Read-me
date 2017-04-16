@@ -1,0 +1,15 @@
+The producer-consumer problem is solved using a semaphore.
+If a task wants to use the semaphore,it needs to lock the semaphore.
+After using the semaphore, we need to realease the semaphore.
+
+Initially, the buffer is empty. So the ull is 0 and empty is 5.
+Here empty defines the number of values that can be in the Queue.
+
+When the producer produces the value, first, we need to lock the 
+semeaphore then increment the full value and decrement the empty value,
+produce the value and realease the semaphore.
+
+When the consumer consumes the value, first, we need to lock the 
+semeaphore then decrement the full value and increment the empty value,
+consume the value and realease the semaphore.
+
